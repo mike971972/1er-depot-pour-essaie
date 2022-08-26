@@ -1,0 +1,164 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+                        /*BARRE DE NAVIVATIONS*/
+nav{
+    display: flex; /*aligner les elements en ligne*/
+    flex-wrap: wrap; /*empiler si les elements ne peuvent pas etre aligné A CAUSE DLA RESOLUTION*/
+    justify-content: center; /*centrer les elements*/
+    align-items: center; /*centrer au meme niveau*/
+    border-bottom: 5px solid lightgreen;
+}
+
+nav h1{
+    color: yellowgreen;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    
+}
+nav .onglets{
+    margin-top: 3px; /*liens alignés avec le titre*/
+    margin-left: 300px; /*espcaement entre le titre et les liens*/
+}
+
+
+nav .onglets a{
+    text-decoration: none;
+    color: lightcoral;
+    margin-right: 10px; /*espacement entre chaqque lien*/
+    border-bottom: 1px solid lightcoral;
+    padding-bottom: 5px; /*espacement texte souligné*/
+}
+                                    /*TITRES*/
+header{
+    display: flex; /*aligner tous les elements*/
+    flex-direction: column; /*afficher en colonne*/
+    height: 250px;
+    align-items: center; /*tous les elements centrer dans le header*/
+    background: url('desert-g7d104479f_1920.jpg');
+    background-size: cover; /*cover pour couvrir la totalite du header*/
+    background-repeat: no-repeat;
+    padding: 5px;
+}
+
+
+header h4{
+    color: white;
+    margin-top: -50px; /*reduire l'escpacement entre h1 et h4*/
+    font-size: 20px;
+    text-align: center; /*aligner el texte sur la meme ligne*/
+    border-bottom: 1px solid white;
+
+}
+
+header h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-top: 5px; /*decaller vers le haut h1*/
+    
+}
+
+                            /*CORPS PRNCIPALES*/
+.main{
+    margin-top: 40px; /*Espacement avec header*/
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+                                 /*CARD*/
+                
+.main .content .card{
+display: flex; /*Aligner les éléments PHOTO à droite  et TEXTE à gauche*/
+flex-wrap: wrap; /*empiler pour le mobile*/
+justify-content: center;
+margin-bottom: 20px; /*Espacemet entre les 2 card*/
+}
+                                /**/
+
+                              /*CARD LEFT*/
+.main .content .card .left{
+    flex: 0 0 30%;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+                              /*CARD RIGHT*/                          
+.main .content .card.right{
+    flex: 0 0 70%;
+}
+
+
+                                    /*PHOTOS*/
+.main .content .card .right img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+   margin-top: 5px; /*Marge entre limage et el texte*/
+}
+                                      
+                            /**FOOTER**/
+
+footer {
+    margin-top: 40px;
+    border-top: 5px solid lightgreen;
+    background-color: lightcoral;
+    padding: 30px 100px;
+}
+
+footer .infos, h1{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    padding: 30px ;
+    
+}
+
+footer .services{
+    margin-bottom: -10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+                        /*responsive design*/
+
+@media screen and (max-width: 513px) {
+    nav .onglets{ 
+    margin-left: 0px;
+    margin-bottom: 30px;
+}
+    header{
+        text-align: center;
+    }
+    .main .content .card .right img{
+        height: 200px;
+        width: 100%;
+        margin-top: 0;
+    }
+    .main .content .card{
+        display: block; /* affiche empile*/
+       
+}
+
+}
+/*
+.main .content .card .left p{
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+}*/
+
+@media screen and (min-width: 514px)  and (max-width:813px){
+    nav .onglets{ 
+    margin-left: 0px;
+    margin-bottom: 30px;
+}
+header{
+    text-align: center;
+}
+}
